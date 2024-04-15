@@ -1,14 +1,18 @@
-// Viết hàm kiểm tra tính đồng nhất chẵn lẻ của 2 số
-function check(a, b) {
-    if (a % 2 === 0 && b % 2 === 0 && a != 0 && b != 0) {
-        return ('toan la so chan');
-    } else if (a % 2 !== 0 && b % 2 !== 0 && a != 0 && b != 0) {
-        return ('toan la so le');
-    } else if (a % 2 !== 0 && b % 2 === 0 && a != 0 && b != 0) {
-        return ('1 le 1 chan');
-    } else if (a % 2 === 0 && b % 2 !== 0 && a != 0 && b != 0) {
-        console.log2('1 chan 1 le');
-    } else {
-        return '0 0'
+// Viết hàm đếm số lượng số chẵn trong mảng
+function demsochan(arr) {
+    let demso = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            demso += 1
+        }
     }
+    return demso;
 }
+
+// cach 2
+const countEvenNumbers = (arr) => {
+    // Sử dụng phương thức filter để lọc ra các số chẵn
+    const evenNumbers = arr.filter(num => num % 2 == 0);
+    // Trả về số lượng phần tử trong mảng chứa các số chẵn
+    return evenNumbers.length;
+};
