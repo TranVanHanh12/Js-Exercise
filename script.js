@@ -1,18 +1,19 @@
-// / Viết hàm kiểm tra 1 số có phải số nguyên tố hay ko
+//   Viết hàm tìm số dư của a chia cho b (ko dùng toán tử %)
 
-function laSoNguyenTo(number) {
-    // Trường hợp đặc biệt: số nguyên tố phải lớn hơn 1
-    if (number <= 1) {
-        return false;
-    }
-
-    // Duyệt qua các số từ 2 đến căn bậc hai của number để kiểm tra tính chia hết
-    for (let i = 2; i <= Math.sqrt(number); i++) {
-
-        if (number % i === 0) {
-            return false;
+function timsodu(a, b) {
+    if (a == 0) {
+        return 0;
+    } else if (b == 0) {
+        return NaN;
+    } else if (a < 0) {
+        while (a < 0) {
+            a += b;
         }
+        return a
+    } else if (a >= b) {
+        while (a >= b) {
+            a -= b;
+        }
+        return a
     }
-
-    return true;
 }
