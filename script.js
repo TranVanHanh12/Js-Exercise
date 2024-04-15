@@ -1,8 +1,8 @@
-// Viết hàm đếm số lượng số chẵn trong mảng
-function demsochan(arr) {
+/  Viết hàm đếm số lượng số lẻ trong mảng
+function demsole(arr) {
     let demso = 0;
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0) {
+        if (arr[i] % 2 != 0) {
             demso += 1
         }
     }
@@ -11,8 +11,8 @@ function demsochan(arr) {
 
 // cach 2
 const countEvenNumbers = (arr) => {
-    // Sử dụng phương thức filter để lọc ra các số chẵn
-    const evenNumbers = arr.filter(num => num % 2 == 0);
-    // Trả về số lượng phần tử trong mảng chứa các số chẵn
+
+    const evenNumbers = arr.filter(num => num % 2 != 0);
+
     return evenNumbers.length;
 };
