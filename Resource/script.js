@@ -14,9 +14,14 @@
 // Viết hàm tìm vị trí của 1 số trong 1 mảng các số
 
 // Viết hàm hoán đổi giá trị a, b, c với nhau
-// function hoandoi(item) {
-
-// }
+const Shuffle = (items) => {
+    for (let i = items.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let tmp = items[i];
+        items[i] = items[j];
+        items[j] = tmp;
+    }
+    return items;
 
 
 // Viết hàm tính a mũ b  
