@@ -1,19 +1,11 @@
-//   Viết hàm tìm số dư của a chia cho b (ko dùng toán tử %)
-
-function timsodu(a, b) {
-    if (a == 0) {
-        return 0;
-    } else if (b == 0) {
-        return NaN;
-    } else if (a < 0) {
-        while (a < 0) {
-            a += b;
+// Viết hàm tìm giá trị lớn nhất trong 1 mảng các số
+function timmax(arr) {
+    max = 0;
+    for (var i = 0; i < arr.length; i++) {
+        element = arr[i];
+        if (element > max) {
+            max = element;
         }
-        return a
-    } else if (a >= b) {
-        while (a >= b) {
-            a -= b;
-        }
-        return a
     }
+    return max;
 }
